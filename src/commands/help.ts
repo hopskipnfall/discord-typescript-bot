@@ -18,7 +18,8 @@ export class HelpCommand implements Command {
       // No command specified, give the user a list of all commands they can use.
       const commandNames = allowedCommands.map(command => command.commandNames[0]);
       await commandContext.originalMessage.reply(
-        `here is a list of commands you can run: ${commandNames.join(", ")}. Try !help ${commandNames[0]} to learn more about one of them.`);
+        `here is a list of commands you can run: ${commandNames.join(", ")}. Try !help ${commandNames[0]} to learn more about one of them.`
+        + `\nVersion: 0.4 https://github.com/hopskipnfall/discord-typescript-bot`);
       return;
     }
 
@@ -27,11 +28,11 @@ export class HelpCommand implements Command {
       await commandContext.originalMessage.reply("I don't know about that command :(. Try !help to find all commands you can use.");
       return Promise.reject("Unrecognized command");
     } else if (allowedCommands.includes(matchedCommand)) {
-      await commandContext.originalMessage.reply(this.buildHelpMessage(matchedCommand, commandContext));
+      await commandContext.originalMessage.reply(this.buildHelpMessageForCommand(matchedCommand, commandContext));
     }
   }
 
-  private buildHelpMessage(command: Command, context: CommandContext): string {
+  private buildHelpMessageForCommand(command: Command, context: CommandContext): string {
     return `${command.getHelpMessage(context.commandPrefix)}\nCommand aliases: ${command.commandNames.join(", ")}`;
   }
 
