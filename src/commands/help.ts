@@ -27,8 +27,12 @@ export class HelpCommand implements Command {
       await commandContext.originalMessage.reply("I don't know about that command :(. Try !help to find all commands you can use.");
       return Promise.reject("Unrecognized command");
     } else if (allowedCommands.includes(matchedCommand)) {
-      await commandContext.originalMessage.reply(matchedCommand.getHelpMessage(commandContext.commandPrefix));
+      await commandContext.originalMessage.reply(this.buildHelpMessage(matchedCommand, commandContext));
     }
+  }
+
+  private buildHelpMessage(command: Command, context: CommandContext): string {
+    return `${command.getHelpMessage(context.commandPrefix)}\nCommand aliases: ${command.commandNames.join(", ")}`;
   }
 
   hasPermissionToRun(commandContext: CommandContext): boolean {
