@@ -2,6 +2,13 @@ import Discord, { Message } from 'discord.js';
 import { config, BotConfig } from './config/config';
 import { CommandHandler } from './command_handler';
 
+/** Pre-startup validation of the bot config. */
+function validateConfig(botConf: BotConfig) {
+  if (!botConf.token) {
+    throw new Error('You need to specify your Discord bot token!');
+  }
+}
+
 validateConfig(config);
 
 const commandHandler = new CommandHandler(config.prefix);
@@ -21,10 +28,3 @@ client.on('error', (e) => {
 });
 
 client.login(config.token);
-
-/** Pre-startup validation of the bot config. */
-function validateConfig(config: BotConfig) {
-  if (!config.token) {
-    throw new Error('You need to specify your Discord bot token!');
-  }
-}

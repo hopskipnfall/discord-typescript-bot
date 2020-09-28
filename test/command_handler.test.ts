@@ -1,12 +1,12 @@
-import { mock } from "ts-mockito";
-import { Message, TextChannel } from "discord.js";
-import { CommandHandler } from "../src/command_handler";
+import { mock } from 'ts-mockito';
+import { Message, TextChannel } from 'discord.js';
+import { CommandHandler } from '../src/command_handler';
 
-describe("CommandHandler", () => {
-  const commandHandler = new CommandHandler("!");
+describe('CommandHandler', () => {
+  const commandHandler = new CommandHandler('!');
 
-  it("should execute a command in a message", () => {
-    const message = buildMessage("!dale");
+  it('should execute a command in a message', () => {
+    const message = buildMessage('!dale');
   });
 });
 

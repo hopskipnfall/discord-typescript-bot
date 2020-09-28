@@ -14,7 +14,7 @@
     "build": "npm run build-ts",
     "serve": "node dist/server.js",
     "test": "jest --forceExit --coverage --verbose",
-    "lint": "npx eslint \"**/*\"",
+    "lint": "npx eslint \"**/*.ts\"",
     "build-ts": "tsc",
     "watch-ts": "tsc -w",
     "tslint": "tslint -c tslint.json -p tsconfig.json",
