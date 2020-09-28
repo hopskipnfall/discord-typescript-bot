@@ -30,7 +30,9 @@ export class CommandHandler {
 
     const commandContext = new CommandContext(message, this.prefix);
 
-    const allowedCommands = this.commands.filter((command) => command.hasPermissionToRun(commandContext));
+    const allowedCommands = this.commands.filter((command) =>
+      command.hasPermissionToRun(commandContext),
+    );
     const matchedCommand = this.commands.find((command) =>
       command.commandNames.includes(commandContext.parsedCommandName),
     );
