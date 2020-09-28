@@ -28,11 +28,12 @@ Note that changes to this file should not be committed to the repository, `confi
 
 ## Key Commands
 
-| Command         | Description                         |
-| --------------- | ----------------------------------- |
-| `npm run start` | Run the bot.                        |
-| `npm run build` | Build the typescript code and lint. |
-| `npm run test`  | Run all tests.                      |
+| Command         | Description                  |
+| --------------- | ---------------------------- |
+| `npm run start` | Run the bot.                 |
+| `npm run build` | Build the typescript code.   |
+| `npm run lint`  | Runs the linter on the code. |
+| `npm run test`  | Run all tests.               |
 
 [build-badge]: https://travis-ci.org/hopskipnfall/discord-typescript-bot.svg?branch=master&style=style=flat-square
 [build]: https://travis-ci.org/hopskipnfall/discord-typescript-bot

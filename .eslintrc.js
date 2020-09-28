@@ -10,6 +10,8 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 12,
     sourceType: 'module',
+    project: './tsconfig.json',
+    tsconfigRootDir: __dirname,
   },
   plugins: [
     '@typescript-eslint',
@@ -18,5 +20,8 @@ module.exports = {
   },
   ignorePatterns: [
     'dist/**',
+    'coverage/**',
+    'jest.config.js',
+    '.eslintrc.js',
   ],
 };
