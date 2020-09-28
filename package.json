@@ -15,7 +15,7 @@
     "serve": "node dist/server.js",
     "test": "jest --forceExit --coverage --verbose",
     "lint": "npx eslint \"**/*.ts\"",
-    "fix-lint": "npx prettier --write .",
+    "format": "npx prettier --write .",
     "build-ts": "tsc",
     "watch-ts": "tsc -w",
     "debug": "npm run build && npm run watch-debug",
