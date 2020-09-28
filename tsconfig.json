@@ -2,8 +2,7 @@
   "compilerOptions": {
     "strictNullChecks": true, // enable strict null checks as a best practice
     "allowJs": false,
-
-    "module": "es2020",
+    "module": "commonjs",
     "esModuleInterop": true,
     "target": "es5",
     "noImplicitAny": true,
