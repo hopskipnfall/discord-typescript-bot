@@ -16,7 +16,7 @@ export type BotConfig = {
 
 export let config: BotConfig = {
   token: "", // TODO: Put your token here!
-  prefix: "./",
+  prefix: "!", // Command prefix. ex: !help
   botOwnerRoleName: "bot-owner",
   enableReactions: true,
 };
