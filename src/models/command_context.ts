@@ -17,7 +17,7 @@ export class CommandContext {
     this.commandPrefix = prefix;
     const splitMessage = message.content.slice(prefix.length).trim().split(/ +/g);
 
-    this.parsedCommandName = splitMessage.shift().toLowerCase();
+    this.parsedCommandName = splitMessage.shift()!.toLowerCase();
     this.args = splitMessage;
     this.originalMessage = message;
   }
