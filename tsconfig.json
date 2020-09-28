@@ -1,39 +1,24 @@
 {
-    "compilerOptions": {
-        "strictNullChecks": true, // enable strict null checks as a best practice
-        "allowJs": false,
+  "compilerOptions": {
+    "strictNullChecks": true, // enable strict null checks as a best practice
+    "allowJs": false,
 
-        "module": "es2020",
-        "esModuleInterop": true,
-        "target": "es5",
-        "noImplicitAny": true,
-        "moduleResolution": "node",
-        "sourceMap": true,
-        "outDir": "dist",
-        "baseUrl": ".",
-        "paths": {
-            "*": [
-                "node_modules/*",
-                "src/types/*"
-            ]
-        },
-        "declaration": false,
-        // "emitDecoratorMetadata": true,
-        // "experimentalDecorators": true,
-        "typeRoots": [
-            "node_modules/@types"
-        ],
-        "lib": [
-            "es2017",
-            "es2016",
-            "es2015",
-            "dom"
-        ]
+    "module": "es2020",
+    "esModuleInterop": true,
+    "target": "es5",
+    "noImplicitAny": true,
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "outDir": "dist",
+    "baseUrl": ".",
+    "paths": {
+      "*": ["node_modules/*", "src/types/*"]
     },
-    "include": [
-        "src/**/*",
-        "test/**/*",
-        ".eslintrc.js",
-        "jest.config.js",
-    ]
+    "declaration": false,
+    // "emitDecoratorMetadata": true,
+    // "experimentalDecorators": true,
+    "typeRoots": ["node_modules/@types"],
+    "lib": ["es2017", "es2016", "es2015", "dom"]
+  },
+  "include": ["src/**/*", "test/**/*", ".eslintrc.js", "jest.config.js"]
 }

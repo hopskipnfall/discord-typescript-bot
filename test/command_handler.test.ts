@@ -1,5 +1,5 @@
+import { Message } from 'discord.js';
 import { mock } from 'ts-mockito';
-import { Message, TextChannel } from 'discord.js';
 import { CommandHandler } from '../src/command_handler';
 
 describe('CommandHandler', () => {

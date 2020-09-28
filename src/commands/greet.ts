@@ -1,5 +1,5 @@
-import { Command } from './command';
 import { CommandContext } from '../models/command_context';
+import { Command } from './command';
 
 export class GreetCommand implements Command {
   commandNames = ['greet', 'hello'];

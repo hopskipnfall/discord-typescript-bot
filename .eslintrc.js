@@ -3,9 +3,7 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: [
-    'airbnb-base',
-  ],
+  extends: ['airbnb-base'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 12,
@@ -20,10 +18,7 @@ module.exports = {
       },
     },
   },
-  plugins: [
-    '@typescript-eslint',
-    'prettier',
-  ],
+  plugins: ['@typescript-eslint', 'prettier'],
   rules: {
     'import/extensions': [
       'error',
@@ -38,8 +33,5 @@ module.exports = {
     'import/prefer-default-export': 'off',
     'prettier/prettier': 'error',
   },
-  ignorePatterns: [
-    'dist/**',
-    'coverage/**',
-  ],
+  ignorePatterns: ['dist/**', 'coverage/**'],
 };

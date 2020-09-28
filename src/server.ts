@@ -1,6 +1,6 @@
 import Discord, { Message } from 'discord.js';
-import { config, BotConfig } from './config/config';
 import { CommandHandler } from './command_handler';
+import { BotConfig, config } from './config/config';
 
 /** Pre-startup validation of the bot config. */
 function validateConfig(botConf: BotConfig) {
