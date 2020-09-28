@@ -12,30 +12,27 @@
     "start": "npm run serve",
     "build": "npm run build-ts && npm run tslint",
     "serve": "node dist/server.js",
-    "watch-node": "nodemon dist/server.js",
-    "watch": "concurrently -k -p \"[{name}]\" -n \"Sass,TypeScript,Node\" -c \"yellow.bold,cyan.bold,green.bold\" \"npm run watch-sass\" \"npm run watch-ts\" \"npm run watch-node\"",
     "test": "jest --forceExit --coverage --verbose",
     "build-ts": "tsc",
     "watch-ts": "tsc -w",
     "tslint": "tslint -c tslint.json -p tsconfig.json",
-    "copy-static-assets": "ts-node copyStaticAssets.ts",
     "debug": "npm run build && npm run watch-debug",
     "serve-debug": "nodemon --inspect dist/server.js",
     "watch-debug": "concurrently -k -p \"[{name}]\" -n \"Sass,TypeScript,Node\" -c \"yellow.bold,cyan.bold,green.bold\" \"npm run watch-sass\" \"npm run watch-ts\" \"npm run serve-debug\""
   },
   "dependencies": {
-    "discord.js": "^11.3.2"
+    "discord.js": "12.3.x"
   },
   "devDependencies": {
-    "@types/jest": "^22.2.2",
-    "@types/node": "^9.6.2",
-    "jest": "^22.4.3",
-    "ts-jest": "^22.0.4",
-    "ts-mockito": "^2.3.0",
-    "ts-node": "^5.0.0",
-    "tslint": "^5.9.1",
-    "typescript": "^2.7.2",
-    "istanbul-api": "1.2.2",
-    "istanbul-reports": "1.1.4"
+    "@types/jest": "26.0.x",
+    "@types/node": "14.11.x",
+    "jest": "26.4.x",
+    "ts-jest": "26.4.x",
+    "ts-mockito": "2.6.x",
+    "ts-node": "9.0.x",
+    "tslint": "6.1.x",
+    "typescript": "4.0.x",
+    "istanbul-api": "3.0.x",
+    "istanbul-reports": "3.0.x"
   }
 }
