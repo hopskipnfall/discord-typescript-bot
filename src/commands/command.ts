@@ -1,5 +1,4 @@
-import { Message } from "discord.js";
-import { CommandContext } from "../models/command_context";
+import { CommandContext } from '../models/command_context';
 
 export interface Command {
   /**
