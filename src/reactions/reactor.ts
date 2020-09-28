@@ -1,15 +1,16 @@
-import { Message } from "discord.js";
-import { config } from "../config/config";
+import { Message } from 'discord.js';
+import { config } from '../config/config';
 
-const ACK_REACTIONS = ["👍", "🎮", "💚", "🍜"];
-const EXPIRED_REACTIONS = ["🖤"];
-const FAILURE_REACTIONS = ["⛔", "🚱"];
+const ACK_REACTIONS = ['👍', '🎮', '💚', '🍜'];
+const EXPIRED_REACTIONS = ['🖤'];
+const FAILURE_REACTIONS = ['⛔', '🚱'];
 
 /** Gets a random element of an array. */
 const getRandom = (array: string[]) => array[Math.floor(Math.random() * array.length)];
 
 export class Reactor {
   enableReactions: boolean;
+
   constructor(enableReactions: boolean) {
     this.enableReactions = enableReactions;
   }
@@ -38,4 +39,4 @@ export class Reactor {
   }
 }
 
-export let reactor = new Reactor(config.enableReactions);
+export const reactor = new Reactor(config.enableReactions);
