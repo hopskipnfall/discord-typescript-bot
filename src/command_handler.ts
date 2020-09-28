@@ -17,7 +17,7 @@ export class CommandHandler {
       GreetCommand,
     ];
 
-    this.commands = commandClasses.map((commandClass) => new commandClass());
+    this.commands = commandClasses.map((CommandClass) => new CommandClass());
     this.commands.push(new HelpCommand(this.commands));
     this.prefix = prefix;
   }

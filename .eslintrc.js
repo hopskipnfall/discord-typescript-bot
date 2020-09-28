@@ -22,6 +22,7 @@ module.exports = {
   },
   plugins: [
     '@typescript-eslint',
+    'prettier',
   ],
   rules: {
     'import/extensions': [
@@ -35,6 +36,7 @@ module.exports = {
       },
     ],
     'import/prefer-default-export': 'off',
+    'prettier/prettier': 'error',
   },
   ignorePatterns: [
     'dist/**',
