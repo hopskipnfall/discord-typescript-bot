@@ -37,7 +37,12 @@ module.exports = {
     ],
     'import/prefer-default-export': 'off',
     'class-methods-use-this': 'off',
-    'prettier/prettier': 'error',
+    'prettier/prettier': [
+      'error',
+      {
+        endOfLine: 'auto',
+      },
+    ],
     'no-unused-vars': 'warn',
   },
   ignorePatterns: ['dist/**', 'coverage/**'],
