@@ -2,10 +2,12 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    jest: true,
   },
   extends: [
     'airbnb-base',
-    'prettier', // This must go last.
+    'prettier', // Prettier modules must go last.
+    'prettier/unicorn',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -21,7 +23,7 @@ module.exports = {
       },
     },
   },
-  plugins: ['@typescript-eslint', 'prettier'],
+  plugins: ['@typescript-eslint', 'unicorn', 'prettier'],
   rules: {
     'import/extensions': [
       'error',
@@ -34,11 +36,9 @@ module.exports = {
       },
     ],
     'import/prefer-default-export': 'off',
-    // TODO: Un-comment when prettier plays nicer with eslint.
-    'implicit-arrow-linebreak': 'off',
     'class-methods-use-this': 'off',
-    'function-paren-newline': ['error', { minItems: 3 }],
     'prettier/prettier': 'error',
+    'no-unused-vars': 'warn',
   },
   ignorePatterns: ['dist/**', 'coverage/**'],
 };

@@ -20,7 +20,7 @@ export class Reactor {
   async success(message: Message) {
     if (!this.enableReactions) return;
 
-    return message.react(getRandom(ACK_REACTIONS));
+    await message.react(getRandom(ACK_REACTIONS));
   }
 
   /** Indicates to the user that the command failed for some reason. */
@@ -28,7 +28,7 @@ export class Reactor {
     if (!this.enableReactions) return;
 
     await message.reactions.removeAll();
-    return message.react(getRandom(FAILURE_REACTIONS));
+    await message.react(getRandom(FAILURE_REACTIONS));
   }
 
   /** Indicates to the user that the command is no longer active, as intended. */
@@ -36,7 +36,7 @@ export class Reactor {
     if (!this.enableReactions) return;
 
     await message.reactions.removeAll();
-    return message.react(getRandom(EXPIRED_REACTIONS));
+    await message.react(getRandom(EXPIRED_REACTIONS));
   }
 }
 

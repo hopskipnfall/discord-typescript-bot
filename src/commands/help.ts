@@ -36,7 +36,7 @@ export class HelpCommand implements Command {
       await commandContext.originalMessage.reply(
         "I don't know about that command :(. Try !help to find all commands you can use.",
       );
-      return Promise.reject('Unrecognized command');
+      throw Error('Unrecognized command');
     }
     if (allowedCommands.includes(matchedCommand)) {
       await commandContext.originalMessage.reply(
