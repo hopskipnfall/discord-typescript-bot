@@ -15,13 +15,15 @@ export class HelpCommand implements Command {
       command.hasPermissionToRun(commandContext),
     );
 
-    if (commandContext.args.length == 0) {
+    if (commandContext.args.length === 0) {
       // No command specified, give the user a list of all commands they can use.
-      const commandNames = allowedCommands.map((command) => command.commandNames[0]);
+      const commandNames = allowedCommands.map(
+        (command) => command.commandNames[0],
+      );
       await commandContext.originalMessage.reply(
-        `here is a list of commands you can run: ${commandNames.join(', ')}. Try !help ${
-          commandNames[0]
-        } to learn more about one of them.` +
+        `here is a list of commands you can run: ${commandNames.join(
+          ', ',
+        )}. Try !help ${commandNames[0]} to learn more about one of them.` +
           '\nVersion: 0.4 https://github.com/hopskipnfall/discord-typescript-bot',
       );
       return;
@@ -43,7 +45,10 @@ export class HelpCommand implements Command {
     }
   }
 
-  private buildHelpMessageForCommand(command: Command, context: CommandContext): string {
+  private buildHelpMessageForCommand(
+    command: Command,
+    context: CommandContext,
+  ): string {
     return `${command.getHelpMessage(
       context.commandPrefix,
     )}\nCommand aliases: ${command.commandNames.join(', ')}`;

@@ -6,7 +6,8 @@ const EXPIRED_REACTIONS = ['🖤'];
 const FAILURE_REACTIONS = ['⛔', '🚱'];
 
 /** Gets a random element of an array. */
-const getRandom = (array: string[]) => array[Math.floor(Math.random() * array.length)];
+const getRandom = (array: string[]) =>
+  array[Math.floor(Math.random() * array.length)];
 
 export class Reactor {
   enableReactions: boolean;

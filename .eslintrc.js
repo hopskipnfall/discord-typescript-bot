@@ -3,7 +3,10 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: ['airbnb-base'],
+  extends: [
+    'airbnb-base',
+    'prettier', // This must go last.
+  ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 12,
@@ -31,6 +34,10 @@ module.exports = {
       },
     ],
     'import/prefer-default-export': 'off',
+    // TODO: Un-comment when prettier plays nicer with eslint.
+    'implicit-arrow-linebreak': 'off',
+    'class-methods-use-this': 'off',
+    'function-paren-newline': ['error', { minItems: 3 }],
     'prettier/prettier': 'error',
   },
   ignorePatterns: ['dist/**', 'coverage/**'],
