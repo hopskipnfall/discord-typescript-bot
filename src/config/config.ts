@@ -5,18 +5,18 @@
  */
 export type BotConfig = {
   /** the Discord bot token. */
-  token: string,
+  token: string;
   /** Prefix used for bot commands. */
-  prefix: string,
+  prefix: string;
   /** The name of the role that gives ultimate power over the bot. */
-  botOwnerRoleName: string,
+  botOwnerRoleName: string;
   /** The bot will add reactions to the command messages indicating success or failure. */
-  enableReactions: boolean,
+  enableReactions: boolean;
 };
 
-export let config: BotConfig = {
+export const config: BotConfig = {
   token: "", // TODO: Put your token here!
-  prefix: "!", // Command prefix. ex: !help
-  botOwnerRoleName: "bot-owner",
+  prefix: '!', // Command prefix. ex: !help
+  botOwnerRoleName: 'bot-owner',
   enableReactions: true,
 };
