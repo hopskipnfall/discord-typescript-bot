@@ -19,7 +19,7 @@ Add your discord bot token to `src/config/config.ts`:
 
 ```ts
 export let config = {
-  token: "djigoj24gijo-dgj9wdfj", // Discord bot token.
+  token: "xxxxx", // Discord bot token.
   prefix: "!", // Command prefix, ex: !hello
 };
 ```
